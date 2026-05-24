@@ -1,0 +1,17 @@
+{
+  "name": "中医康复病历助手",
+  "short_name": "病历助手",
+  "description": "内科病房中医康复病历模板，入院到出院完整文书",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#1a6b4a",
+  "theme_color": "#1a6b4a",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
