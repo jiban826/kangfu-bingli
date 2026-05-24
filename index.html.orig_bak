@@ -185,9 +185,9 @@ var DISEASES=[
   {id:'shoulder',name:'肩凝症（肩周炎）',icon:'💪',short:'肩凝',tcm:'肩凝症',west:'肩关节周围炎',syndrome:'寒湿痹阻证',
    exam:'右肩关节活动受限，前屈60°，外展50°，后伸20°，肩峰下压痛(+)，Neer征(+)',
    plan:'1.中医中药：散寒除湿通络，方用蠲痹汤加减\n2.针灸治疗：取穴肩髃、肩髎、肩贞、阿是穴、曲池、外关\n3.推拿治疗：肩关节松解手法\n4.康复训练：关节松动术、爬墙训练\n5.物理治疗：中频电疗、蜡疗',
-   diff:'1.与肩袖损伤鉴别：肩袖损伤有外伤史，主动活动受限但被动活动范围基本正常\n2.与肩峰撞击综合征鉴别：撞击综合征疼痛在肩关节外展60°-120°时明显\n3.与颈椎病鉴别：颈椎病肩痛常伴上肢放射痛、麻木',
-   ins:['肩周炎推拿治疗需记录手法类型及时间','物理治疗每日不超过2项','康复治疗需含肩关节功能评定','一般住院14-21天']},
-  {id:'knee',name:'膝痹（膝骨关节炎）',icon:'🦵',short:'膝痹',tcm:'膝痹',west:'双膝骨关节炎',syndrome:'肝肾亏虚证',
+   diff:'1.与肩袖损伤鉴别：肩袖损伤主动活动受限而被动活动基本正常，肩峰下撞击征(+)\n2.与肱二头肌长头腱鞘炎鉴别：肱二头肌长头腱处压痛明显\n3.与颈椎病肩部放射痛鉴别：颈椎病伴颈部症状及上肢放射痛',
+   ins:['关节松动术为医保甲类','物理治疗项目同一部位每日不超过2项','中医小针刀治疗限高级职称医师操作','封闭注射需注明药物名称及剂量']},
+  {id:'arthralgia',name:'骨痹（骨关节炎）',icon:'🦴',short:'骨痹',tcm:'骨痹',west:'膝关节骨性关节炎',syndrome:'肝肾亏虚证',
    exam:'双膝关节轻度肿胀，屈伸活动受限（ROM:主动屈曲100°），髌骨研磨试验(+)，关节无红肿发热',
    plan:'1.中医中药：补益肝肾、舒筋活络，方用独活寄生汤加减\n2.针灸治疗：取穴膝眼、梁丘、血海、足三里、阳陵泉\n3.物理治疗：超短波、中频电疗\n4.康复训练：股四头肌肌力训练、关节活动度训练',
    diff:'1.与类风湿性关节炎鉴别：对称性小关节受累，晨僵>1小时，RF/CCP抗体阳性\n2.与痛风性关节炎鉴别：急性发作关节红肿热痛，血尿酸升高\n3.与半月板损伤鉴别：有外伤史，关节交锁、弹响',
@@ -201,39 +201,8 @@ var DISEASES=[
    exam:'神清，言语欠流利，左上肢肌力III级，左下肢IV级，肌张力增高，可拄拐短距离行走',
    plan:'1.中医中药：益气活血通络，方用补阳还五汤加减\n2.针灸治疗：取穴百会、四神聪、肩髃、曲池、手三里、合谷、环跳、阳陵泉、足三里\n3.康复训练：偏瘫肢体综合训练、ADL训练、言语训练\n4.物理治疗：中频电疗、生物反馈',
    diff:'1.与血管性痴呆鉴别：血管性痴呆进行性认知功能下降，Hachinski缺血评分>7分\n2.与Alzheimer病鉴别：AD隐匿起病，进行性记忆障碍为主\n3.与正常颅压脑积水鉴别：NPH临床三联征：步态异常、认知障碍、尿失禁',
-   ins:['中风后遗症康复与急性期治疗医保支付标准不同','言语/吞咽/作业治疗需有专项评定记录','康复辅助器具需符合医保目录','定期评估ADL改善情况']},
-  {id:'insomnia',name:'不寐（失眠症）',icon:'🛌',short:'不寐',tcm:'不寐',west:'失眠症',syndrome:'心脾两虚证',
-   exam:'神疲乏力，面色少华，眼周晦暗。舌淡，苔薄白，脉细弱。',
-   plan:'1.中医中药：补益心脾、养血安神，方用归脾汤加减\n2.针灸治疗：取穴四神聪、神门、内关、三阴交、足三里、安眠穴\n3.推拿治疗：头部推拿放松\n4.耳穴压豆（神门、心、肾、皮质下）\n5.心理治疗：认知行为疗法（CBT-I）、放松训练',
-   diff:'1.与焦虑症鉴别：焦虑症以过度担忧、紧张为核心，HAMA评分>14分\n2.与抑郁症鉴别：抑郁症以情绪低落、兴趣丧失为核心，伴早醒\n3.与睡眠呼吸暂停综合征鉴别：以打鼾、呼吸暂停、日间嗜睡为特征',
-   ins:['失眠症住院康复治疗医保需明确适应证','认知行为疗法（CBT-I）为医保甲类','耳穴压豆为中医特色治疗项目','住院康复一般10-14天']},
-  {id:'headache',name:'头痛（偏头痛/紧张型头痛）',icon:'🤕',short:'头痛',tcm:'头痛',west:'头痛（慢性每日头痛）',syndrome:'肝阳上亢证',
-   exam:'双侧颞部及枕部压痛(+)，颈部肌肉紧张，颈椎活动轻度受限。舌红，苔薄黄，脉弦有力。',
-   plan:'1.中医中药：平肝潜阳、通络止痛，方用天麻钩藤饮加减\n2.针灸治疗：取穴百会、风池、太阳、率谷、头维、合谷、太冲\n3.推拿治疗：头面部推拿、颈项部松解\n4.物理治疗：经颅磁刺激、生物反馈治疗',
-   diff:'1.与偏头痛鉴别：偏头痛呈搏动性，伴恶心呕吐、畏光畏声\n2.与丛集性头痛鉴别：单侧眼眶周围剧烈疼痛，伴同侧自主神经症状\n3.与颅内器质性病变鉴别：颅内占位伴颅高压症状，CT/MRI可明确',
-   ins:['慢性头痛康复治疗住院医保有明确标准','经颅磁刺激限药物难治性头痛','推拿治疗需记录手法类型及时间','一般住院10-14天']},
-  {id:'depression',name:'郁病（焦虑抑郁状态）',icon:'😔',short:'郁病',tcm:'郁病',west:'混合性焦虑抑郁障碍',syndrome:'肝郁气滞证',
-   exam:'焦虑貌，言语偏少，胸胁胀满，善太息，情绪低落。舌淡红，苔薄白，脉弦。HAMA 16分，HAMD 18分。',
-   plan:'1.中医中药：疏肝解郁、理气安神，方用逍遥散合甘麦大枣汤加减\n2.针灸治疗：取穴百会、印堂、神门、内关、太冲、合谷、足三里\n3.中医心理治疗：中医五音疗法、五行情绪疗法\n4.康复训练：放松训练、认知行为治疗、团体心理治疗\n5.物理治疗：经颅磁刺激、生物反馈治疗',
-   diff:'1.与抑郁症鉴别：抑郁症以情绪低落、兴趣丧失为核心，伴晨重暮轻、自杀观念\n2.与广泛性焦虑鉴别：GAD以过度焦虑担忧为核心，伴运动性紧张\n3.与躯体形式障碍鉴别：反复躯体症状为主诉，检查阴性，患者过度关注',
-   ins:['焦虑抑郁状态康复住院需有功能障碍评估','心理治疗项目医保有支付次数限制','经颅磁刺激治疗需有适应症评估','住院一般14-21天配合药物治疗']},
-  {id:'cervical_neuropathy',name:'项痹（颈椎病-神经根型）',icon:'🦒',short:'项痹',tcm:'项痹',west:'颈椎病（神经根型）',syndrome:'风寒湿痹证',
-   exam:'颈椎曲度变直，C5-6、C6-7棘突旁压痛(+)，右臂丛牵拉试验(+)，右手拇指示指感觉减退，右肱二头肌肌力IV级。舌淡暗，苔白滑，脉弦紧。',
-   plan:'1.中医中药：祛风散寒除湿通络，方用葛根汤合蠲痹汤加减\n2.针灸治疗：取穴颈夹脊（C5-7）、大椎、肩井、曲池、手三里、合谷、外关\n3.推拿治疗：颈项部推拿松解、整脊手法\n4.牵引：颈椎牵引（3-5kg×15min）\n5.物理治疗：超短波、中频电疗',
-   diff:'1.与脊髓型颈椎病鉴别：脊髓型下肢行走不稳、Hoffmann征(+)\n2.与胸廓出口综合征鉴别：TOS上肢外展时加重、Adson试验(+)\n3.与腕管综合征鉴别：正中神经支配区症状为主，夜间麻醒',
-   ins:['神经根型颈椎病保守治疗住院医保支付明确','颈椎牵引需记录牵引重量、时间','神经阻滞治疗限药物治疗无效者','一般住院14-21天']},
-  {id:'parkinson',name:'颤病（帕金森病康复）',icon:'🏃',short:'颤病',tcm:'颤病',west:'帕金森病（Hoehn-Yahr II-III级）',syndrome:'肝肾阴虚证',
-   exam:'面具脸，双侧静止性震颤（右为主），肌张力齿轮样增高，运动迟缓，步幅变小，转身困难。舌暗红少苔，脉弦细。',
-   plan:'1.中医中药：滋补肝肾、熄风止颤，方用大定风珠合六味地黄丸加减\n2.针灸治疗：取穴四神聪、风池、阳陵泉、足三里、三阴交、太冲\n3.康复训练：帕金森特定康复（姿势训练、步态训练、平衡训练、面部表情训练）\n4.物理治疗：经颅磁刺激\n5.作业治疗：ADL训练、防跌倒训练',
-   diff:'1.与特发性震颤鉴别：姿势性/动作性震颤，无肌强直及运动迟缓\n2.与多系统萎缩鉴别：MSA伴自主神经功能障碍（体位性低血压、尿失禁）\n3.与药物性帕金森综合征鉴别：有抗精神病药物用药史',
-   ins:['帕金森病康复住院需Hoehn-Yahr分级评估','左旋多巴类药物医保限定支付范围','经颅磁刺激限药物疗效减退者','住院康复一般14-28天']},
-  {id:'rotator_cuff',name:'肩袖损伤（康复期）',icon:'🤷',short:'肩袖损伤',tcm:'肩痛',west:'肩袖损伤（康复期）',syndrome:'气滞血瘀证',
-   exam:'右肩主动前屈80°、外展70°，被动活动可。疼痛弧征(+)、Jobe征(+)、外旋滞臂试验(+)。肩峰下压痛(+)。舌暗紫，苔薄白，脉弦涩。',
-   plan:'1.中医中药：活血化瘀通络止痛，方用身痛逐瘀汤加减\n2.针灸治疗：取穴肩髃、肩髎、肩贞、臂臑、曲池、合谷\n3.康复训练：保护性被动活动度训练、肩胛稳定训练、渐进抗阻训练\n4.物理治疗：超声波、低能量激光、冲击波',
-   diff:'1.与肩周炎鉴别：肩周炎主动被动均受限，关节粘连明显\n2.与肩峰撞击综合征鉴别：Neer征(+)、Hawkins(+)\n3.与肱二头肌长头腱炎鉴别：结节间沟压痛(+)、Speed征(+)',
-   ins:['肩袖损伤保守治疗及术后康复医保明确','冲击波治疗限慢性肌腱病变，一般不超过5次','康复治疗需含肩关节功能评定','保守治疗无效考虑手术，术后康复14-21天']}
+   ins:['中风后遗症康复与急性期治疗医保支付标准不同','言语/吞咽/作业治疗需有专项评定记录','康复辅助器具需符合医保目录','定期评估ADL改善情况']}
 ];
-
 
 var TEMPLATES=[
   {id:'admission',name:'入院记录',icon:'📋',desc:'入院记录（含中医四诊、辨证分析）'},
@@ -362,22 +331,6 @@ function openEditor(diseaseId,tplId){
   $('saveBtn').addEventListener('click',saveRecord);
   $('clearBtn').addEventListener('click',function(){if(confirm('确定清空当前填写内容？'))openEditor(diseaseId,tplId);});
   
-  // 自动将范例填入主要文本框
-  try{
-    var _eg = EXAMPLES[curDisease] ? EXAMPLES[curDisease][curTemplate] : null;
-    if(_eg && typeof _eg === 'string'){
-      var _fm = {admission:'present_illness',first_course:'diff_diag',daily_course:'daily_exam',attending_round:'attending_analysis',chief_round:'chief_analysis',discharge:'treatment_course'};
-      var _tid = _fm[curTemplate];
-      if(_tid){
-        var _el = document.getElementById('f_'+_tid);
-        if(_el && !_el.value.trim()){
-          _el.value = _eg;
-          curForm[_tid] = _eg;
-        }
-      }
-    }
-  }catch(_e){console.error(_e);}
-  
   showPage('pageEditor');
 }
 
@@ -409,7 +362,7 @@ function getAdmissionFields(d,base){
   return base.concat([
     {id:'admission_date',label:'入院时间',type:'text',def:new Date().toLocaleString('zh-CN')},
     {id:'chief_complaint',label:'主诉',type:'textarea',def:'',help:'格式：症状+时间，如"右侧肢体乏力伴言语不利3天"'},
-    {id:'present_illness',label:'入院记录（含主诉\现病史\中医四诊等）',type:'textarea',def:'',tall:true},
+    {id:'present_illness',label:'现病史',type:'textarea',def:'',tall:true},
     {id:'past_history',label:'既往史',type:'textarea',def:'高血压病史 年\n糖尿病病史 年\n其他：',tall:true},
     {id:'temperature',label:'体温(℃)',type:'text',def:'36.5'},
     {id:'pulse',label:'脉搏(次/分)',type:'text',def:'78'},
@@ -430,7 +383,7 @@ function getFirstFields(d,base){
     {id:'pulse',label:'脉搏(次/分)',type:'text',def:'78'},
     {id:'bp',label:'血压(mmHg)',type:'text',def:'130/80'},
     {id:'physical_findings',label:'阳性体征',type:'textarea',def:d.exam||'',tall:true},
-    {id:'diff_diag',label:'首次病程记录（含鉴别诊断\诊疗计划等）',type:'textarea',def:d.diff||'',tall:true,help:'[已预填示范内容，可直接修改]'},
+    {id:'diff_diag',label:'鉴别诊断',type:'textarea',def:d.diff||'',tall:true,help:'[已预填该病种鉴别诊断内容]'},
     {id:'tcm_therapy',label:'中医治法',type:'text',def:''},
     {id:'tcm_prescription',label:'中药方剂',type:'text',def:''},
     {id:'treatment_plan_details',label:'诊疗计划',type:'textarea',def:d.plan||'',tall:true},
@@ -453,7 +406,7 @@ function getDailyFields(d,base){
     {id:'temperature',label:'体温(℃)',type:'text',def:'36.5'},
     {id:'pulse_rate',label:'脉搏(次/分)',type:'text',def:'78'},
     {id:'blood_pressure',label:'血压(mmHg)',type:'text',def:'130/80'},
-    {id:'daily_exam',label:'病程记录内容',type:'textarea',def:'',tall:true},
+    {id:'daily_exam',label:'今日查体',type:'textarea',def:'',tall:true},
     {id:'today_tcm',label:'中医治疗',type:'textarea',def:'',tall:true},
     {id:'rehab_today',label:'康复治疗',type:'textarea',def:'',tall:true},
     {id:'today_syndrome',label:'今日辨证',type:'text',def:d.syndrome||''},
@@ -470,7 +423,7 @@ function getAttendingFields(d,base){
     {id:'hospital_day',label:'住院第几天',type:'number',def:'3',help:'主治医师查房一般入院1周内完成'},
     {id:'condition_report',label:'病情汇报',type:'textarea',def:'',tall:true},
     {id:'attending_exam',label:'主治医师查体',type:'textarea',def:'',tall:true},
-    {id:'attending_analysis',label:'查房记录内容（含分析\指示等）',type:'textarea',def:'',tall:true},
+    {id:'attending_analysis',label:'主治医师分析',type:'textarea',def:'',tall:true},
     {id:'opinion_1',label:'诊疗意见1',type:'text',def:''},
     {id:'opinion_2',label:'诊疗意见2',type:'text',def:''},
     {id:'opinion_3',label:'诊疗意见3',type:'text',def:''}
@@ -484,7 +437,7 @@ function getChiefFields(d,base){
     {id:'hospital_day',label:'住院第几天',type:'number',def:'7',help:'主任查房一般入院2周内完成'},
     {id:'condition_report',label:'经治医师汇报病情',type:'textarea',def:'',tall:true},
     {id:'chief_exam',label:'主任医师查体',type:'textarea',def:'',tall:true},
-    {id:'chief_analysis',label:'查房记录内容（含分析\指示等）',type:'textarea',def:'',tall:true},
+    {id:'chief_analysis',label:'主任医师分析及指示',type:'textarea',def:'',tall:true},
     {id:'opinion_diag',label:'关于诊断',type:'text',def:''},
     {id:'opinion_treat',label:'关于治疗',type:'text',def:''},
     {id:'opinion_rehab',label:'关于康复',type:'text',def:''}
@@ -497,7 +450,7 @@ function getDischargeFields(d,base){
     {id:'discharge_date',label:'出院日期',type:'text',def:''},
     {id:'stay_days',label:'住院天数',type:'number',def:''},
     {id:'admission_status',label:'入院情况',type:'textarea',def:'',tall:true},
-    {id:'treatment_course',label:'出院记录内容（含诊疗经过\出院情况等）',type:'textarea',def:'',tall:true,help:'[已预填示范内容，可直接修改]'},
+    {id:'treatment_course',label:'诊疗经过',type:'textarea',def:'',tall:true,help:'主要治疗措施及病情变化'},
     {id:'discharge_status',label:'出院情况',type:'textarea',def:'',tall:true},
     {id:'medication_advice',label:'药物治疗建议',type:'textarea',def:'',tall:true},
     {id:'rehab_advice',label:'康复指导',type:'textarea',def:'',tall:true},
@@ -685,241 +638,6 @@ window._delRecord=function(id){
 };
 
 // ===== EVENT BINDING =====
-
-
-// ===== 参考范例数据（三甲医院标准病历模板）=====
-var EXAMPLES = {
-  stroke: {
-    admission: `【入院记录】
-
-姓名：张建国　　性别：男　　年龄：65岁
-入院时间：2026年5月20日 14:30
-
-主诉：右侧肢体乏力伴言语不利3天
-
-现病史：患者于3天前晨起时无明显诱因出现右侧肢体乏力，右上肢抬举困难，右下肢行走拖曳，伴言语含糊不清。CT示"左侧基底节区腔隙性梗死"。既往高血压糖尿病史。
-
-体格检查 T:36.5℃ P:78次/分 BP:142/88mmHg
-神清，言语欠清晰。右侧鼻唇沟变浅，伸舌右偏。右上肢肌力III级，右下肢肌力IV级。舌暗红，苔薄白，脉弦细。
-
-中医诊断：中风病（气虚血瘀证）
-西医诊断：脑梗死恢复期
-
-诊疗计划：补阳还五汤加减益气活血通络；针灸百会、四神聪、风池、肩髃、曲池等；偏瘫综合康复训练；阿司匹林抗血小板、阿托伐他汀调脂稳斑。`,
-    first_course: `【首次病程记录】
-
-一、病例特点
-1.患者张建国，男，65岁，因"右侧肢体乏力伴言语不利3天"入院。
-2.查体：右侧鼻唇沟变浅，右上肢肌力III级，右下肢IV级，右侧巴氏征(+)。舌暗红，苔薄白，脉弦细。
-
-二、拟诊讨论
-中医诊断：中风病（气虚血瘀证）
-西医诊断：脑梗死恢复期
-
-三、鉴别诊断
-1.与脑出血鉴别：脑出血起病更急，常有意识障碍，CT高密度灶
-2.与颅内占位鉴别：颅内肿瘤起病缓慢，进行性加重
-3.与TIA鉴别：TIA症状<24小时，可完全恢复
-
-四、诊疗计划
-补阳还五汤加减；针灸平补平泻；PT+OT+ST康复训练；二级预防药物。`,
-    daily_course: `【日常病程记录】
-
-日期：2026年5月22日　　住院第2天
-
-病情变化：神清，精神可。右侧肢体乏力无明显加重，言语较前稍好转。
-查体：T36.4℃ P76次/分 BP138/86mmHg，右上肢肌力III级，右下肢IV级。
-治疗：补阳还五汤加减。针灸。偏瘫综合训练30分钟+言语训练20分钟。
-辨证：气虚血瘀证　治法：益气活血通络
-方药：补阳还五汤加减（黄芪30g、当归尾12g、赤芍12g、地龙10g、川芎10g）`,
-    attending_round: `【主治医师查房记录】
-
-查房时间：2026年5月23日 09:30　主治医师：王明华　住院第3天
-
-病情汇报：右侧肢体乏力好转，言语欠流利但较前清晰。血压波动135-145/85-90mmHg。
-
-主治医师分析：脑梗死恢复期处于神经功能恢复黄金期，应积极康复干预。患者气虚血瘀证，补阳还五汤方证相符。
-
-诊疗意见：
-1.黄芪加量至45g，加鸡血藤15g
-2.康复PT 45min+OT 30min，每日各1次
-3.监测血压血糖；完善颈部血管超声`,
-    chief_round: `【主任（副主任）医师查房记录】
-
-查房时间：2026年5月27日 10:00　主任医师：陈国华　住院第7天
-
-病情汇报：右上肢肌力IV级，右下肢IV+级，可自行坐起，言语较前清晰。
-
-主任医师分析：入院1周神经功能恢复良好。脑梗死恢复期应坚持"全面评估、综合干预、个体化方案"原则。
-
-1.诊断明确：右侧基底节区脑梗死（恢复期），气虚血瘀证
-2.治疗：前方加全蝎3g、蜈蚣2条（研末冲服）
-3.康复：增加坐-站训练、平衡训练，准备步行训练`,
-    discharge: `【出院记录】
-
-入院日期：2026年5月20日　　出院日期：2026年6月3日　　住院天数：14天
-
-诊疗经过：予补阳还五汤加减，针灸配合电针，康复PT+OT+ST。经14天治疗，言语基本清晰，右上肢肌力IV级，右下肢V-级，可辅助行走约20米。
-
-出院诊断：中医：中风病（气虚血瘀证）；西医：脑梗死恢复期
-
-出院情况：Barthel指数70分（入院45分）。血压130/82mmHg。
-
-出院医嘱：
-1.药物：阿司匹林100mg qd、阿托伐他汀20mg qn
-2.康复：家庭每日主动运动30分钟，门诊康复每周3次
-3.复诊：2周后复诊`
-  },
-  vertigo: {
-    admission: `【入院记录】
-
-姓名：李秀英　　性别：女　　年龄：52岁
-
-主诉：反复头晕伴颈部不适2年，加重3天
-
-诊疗计划：半夏白术天麻汤加减；针灸风池、百会、颈夹脊；推拿；颈椎牵引；超短波。`,
-    first_course: `鉴别诊断：1.与后循环缺血鉴别（脑干小脑体征）；2.与耳石症鉴别（头位相关、持续时间短）；3.与梅尼埃病鉴别（耳鸣听力下降）。`,
-    daily_course: `住院第2天：眩晕减轻，颈部僵硬缓解。半夏白术天麻汤加减。针灸+推拿+牵引+超短波。`,
-    attending_round: `住院第4天：眩晕明显缓解。前方加葛根15g、菖蒲10g。颈椎牵引3.5kg。颈部医疗体操。`,
-    chief_round: `住院第8天：眩晕基本消失。出院前改方健脾化痰、平肝熄风。制定家庭颈部保健方案。`,
-    discharge: `住院14天。眩晕基本消失，颈椎活动度正常。氟桂利嗪5mg qn×2周。调整枕头高度、颈部保健操。`
-  },
-  lumbar: {
-    admission: `【入院记录】
-
-姓名：赵大海　　性别：男　　年龄：45岁
-
-主诉：腰部疼痛伴左下肢放射痛1周，加重2天
-
-诊疗计划：身痛逐瘀汤加减；针灸肾俞、大肠俞、腰阳关等；推拿整复；腰椎牵引；中频电疗。`,
-    first_course: `鉴别诊断：1.与腰椎管狭窄症鉴别（间歇性跛行）；2.与肾结石鉴别（绞痛、血尿）；3.与骨质疏松性骨折鉴别（老年、轻微外伤）。`,
-    daily_course: `住院第2天：腰痛减轻（NRS 7→4分）。身痛逐瘀汤加减。腰椎牵引30kg×20min+中频电疗。卧床休息。`,
-    attending_round: `住院第4天：腰痛明显减轻。前方加延胡索15g、川楝子10g。牵引35kg。核心肌群训练。健康教育。`,
-    chief_round: `住院第9天：腰痛基本消失。改补肾壮腰汤加减（杜仲、续断、牛膝）。核心训练计划。建议调换工种。`,
-    discharge: `住院14天。腰痛消失，直腿抬高(-)。腰痛宁胶囊2粒 tid。核心肌群训练。2周后复诊。`
-  },
-  facial: {
-    admission: `【入院记录】
-
-姓名：王丽华　　性别：女　　年龄：35岁
-
-主诉：左侧口眼歪斜2天
-
-诊疗计划：牵正散加减祛风化痰通络；针灸阳白、四白、颊车、地仓；面部功能训练；红外线照射。`,
-    first_course: `鉴别诊断：1.与中枢性面瘫鉴别（额纹存在、伴偏瘫）；2.与Ramsay Hunt鉴别（耳部疱疹、耳痛）；3.与GBS鉴别（双侧、四肢瘫）。`,
-    daily_course: `住院第2天：面部症状同前。牵正散加减。针灸（浅刺平补平泻）。面部按摩+功能训练。夜间眼膏保护角膜。`,
-    attending_round: `住院第4天：左眼闭合留缝2mm。前方加黄芪15g、当归10g。电针（断续波）。面部训练增频。`,
-    chief_round: `住院第8天：左眼完全闭合，表情基本对称。改补阳还五汤合牵正散加减。面部训练坚持至完全恢复。`,
-    discharge: `住院14天。House-Brackmann II级。甲钴胺0.5mg tid。华佗再造丸8g tid。面部表情肌训练×3组/日。`
-  },
-  shoulder: {
-    admission: `【入院记录】
-
-姓名：刘德福　　性别：男　　年龄：56岁
-
-主诉：右肩关节疼痛伴活动受限3个月，加重1周
-
-诊疗计划：蠲痹汤加减散寒除湿通络；针灸肩髃、肩髎、肩贞；推拿松解；关节松动术；蜡疗。`,
-    first_course: `鉴别诊断：1.与肩袖损伤鉴别（外伤史、被动活动正常）；2.与肩峰撞击鉴别（外展60-120°痛）；3.与颈椎病鉴别（上肢放射痛）。`,
-    daily_course: `住院第2天：肩痛减轻（夜间仍痛）。蠲痹汤加减。针灸+推拿+关节松动术II级+蜡疗。钟摆运动。`,
-    attending_round: `住院第4天：前屈80°外展65°。加制川乌6g（先煎）、细辛3g。关节松动术III级。爬墙+滑轮牵伸。`,
-    chief_round: `住院第8天：前屈100°外展80°。去制川乌，加葛根15g、伸筋草15g。关节松动术IV级。弹力带抗阻训练。`,
-    discharge: `住院14天。前屈110°外展90°。Constant-Murley 35→72分。塞来昔布200mg qd×1周。家庭康复每日2组至少3个月。`
-  },
-  knee: {
-    admission: `【入院记录】
-
-姓名：陈秀英　　性别：女　　年龄：68岁
-
-主诉：双膝关节疼痛伴活动受限5年，加重1个月
-
-诊疗计划：独活寄生汤加减补益肝肾；针灸膝眼、梁丘、血海、足三里；超短波+中频电疗；股四头肌训练。`,
-    first_course: `鉴别诊断：1.与类风湿性关节炎鉴别（对称小关节、晨僵>1h、RF+）；2.与痛风鉴别（红肿热、尿酸↑）；3.与半月板损伤鉴别（外伤、交锁）。`,
-    daily_course: `住院第2天：双膝疼痛减轻（NRS 6→4分）。独活寄生汤加减。超短波+中频电疗。股四头肌等长收缩。`,
-    attending_round: `住院第4天：行走1000米方痛。加骨碎补15g、淫羊藿15g。TENS镇痛。闭链运动。控制体重。`,
-    chief_round: `住院第8天：行走2000米无痛。加穿山龙15g、鸡血藤15g。中药薰洗（透骨草30g、伸筋草30g）。家庭训练计划。`,
-    discharge: `住院14天。WOMAC 62→28分。氨基葡萄糖750mg qd。仙灵骨葆3粒 bid。家庭训练每日2组。4周后复诊。`
-  },
-  flaccidity: {
-    admission: `【入院记录】
-
-姓名：张晓明　　性别：男　　年龄：38岁
-
-主诉：双下肢运动感觉障碍3个月（高处坠落伤后）
-
-诊疗计划：补中益气汤合四物汤加减；针灸脾俞、胃俞、足三里；康复肌力+平衡+转移训练；NMES；并发症防治。`,
-    first_course: `鉴别诊断：1.与GBS鉴别（对称性弛缓性瘫、CSF蛋白-细胞分离）；2.与MND鉴别（肌萎缩、肌束震颤）；3.与MS鉴别（反复发作、脱髓鞘病灶）。`,
-    daily_course: `住院第2天：双下肢肌力II-III级。补中益气汤合四物汤加减。针灸。肌力训练30min+平衡训练20min+NMES。每2小时翻身防压疮。`,
-    attending_round: `住院第4天：肌力无明显变化。前方加黄芪45g、党参15g。增加上肢肌力+轮椅操作训练。膀胱管理评估。关注心理状态。`,
-    chief_round: `住院第7天：加鹿角胶10g（烊化）补肾填精。鼠神经生长因子肌注。增加站立床训练（从30°开始）。家属培训。`,
-    discharge: `住院28天。双下肢肌力III-IV级，平行杠内站立5分钟。甲钴胺0.5mg tid。社区康复每周5次。居家无障碍改造。`
-  },
-  poststroke: {
-    admission: `【入院记录】
-
-姓名：周明山　　性别：男　　年龄：60岁
-
-主诉：左侧肢体活动不利2个月（脑梗死后）
-
-诊疗计划：补阳还五汤加减；针灸百会、肩髃、曲池等；偏瘫综合+ADL训练；中频电疗+生物反馈。`,
-    first_course: `鉴别诊断：1.与血管性痴呆鉴别（认知下降、Hachinski>7）；2.与AD鉴别（隐匿起病、记忆障碍）；3.与NPH鉴别（步态异常、认知障碍、尿失禁）。`,
-    daily_course: `住院第2天：左上肢肌力III级，左下肢IV级。补阳还五汤加减。针灸+偏瘫训练30min+ADL训练20min。评估康复辅具。`,
-    attending_round: `住院第4天：肌力III+/IV+级。加鸡血藤15g、地龙15g。坐-站转移+平衡训练。家属培训。评估AFO。`,
-    chief_round: `住院第7天：加强活血通络，加全蝎3g、蜈蚣2条。头皮针。增加步行训练（平行杠内）。家庭环境改造方案。`,
-    discharge: `住院14天。Barthel 65分（入院40分）。阿司匹林100mg qd、阿托伐他汀20mg qn。社区康复每周5次。居家适老化改造。`
-  },
-  insomnia: {
-    admission: "【入院记录】姓名：吴秀珍，女，48岁。入睡困难2年加重2周。归脾汤加减补益心脾；针灸四神聪、神门、内关；耳穴压豆；CBT-I。",
-    first_course: "鉴别诊断：1.焦虑症(HAMA>14)；2.抑郁症(情绪低落)；3.SAHS(打鼾呼吸暂停)。诊疗：归脾汤加减。",
-    daily_course: "住院第2天：入睡约45分钟，夜间醒2次。归脾汤加减。针灸+耳穴压豆+放松训练。心脾两虚证。",
-    attending_round: "住院第4天：入睡30分钟，总睡眠5-6小时。前方酸枣仁加至40g、加合欢皮15g。CBT-I持续。",
-    chief_round: "住院第10天：入睡20分钟，整夜安睡6.5小时。减酸枣仁至20g。改归脾丸善后。坚持睡眠卫生。",
-    discharge: "住院14天。PSQI 18→7分。归脾丸8丸 tid×4周。规律作息+睡前放松。2周后复诊。"
-  },
-  headache: {
-    admission: "【入院记录】姓名：钱小明，男，42岁。反复头痛10年加重1周。天麻钩藤饮加减；针灸百会、风池、太阳；推拿；TMS。",
-    first_course: "鉴别诊断：1.偏头痛(搏动性+先兆)；2.丛集性(单侧眼眶剧痛)；3.颅内病变(CT/MRI排除)。",
-    daily_course: "住院第2天：NRS 6→3分。天麻钩藤饮加减。针灸+推拿+TMS。指导头痛日记。",
-    attending_round: "住院第4天：短时胀痛1次。加白芷10g、川芎15g。冲击波颈肌激痛点。停布洛芬。",
-    chief_round: "住院第8天：加蔓荆子10g清利。渐进性肌肉放松+腹式呼吸。避免巧克力、红酒、失眠。",
-    discharge: "住院14天。头痛频率每日1次降至每2-3日1次。氟桂利嗪5mg qn×4周。2周后复诊。"
-  },
-  depression: {
-    admission: "【入院记录】姓名：林晓红，女，36岁。情绪低落伴焦虑3个月。逍遥散合甘麦大枣汤加减；针灸百会、印堂、神门；TMS；CBT。",
-    first_course: "鉴别诊断：1.抑郁症(自杀观念)；2.广泛性焦虑(过度担忧)；3.躯体形式障碍(反复躯体症状)。",
-    daily_course: "住院第2天：情绪稍平静仍胸闷。逍遥散合甘麦大枣汤加减。针灸+TMS 20min+CBT 45min。肝郁气滞证。",
-    attending_round: "住院第4天：情绪稳定面有笑容。加玫瑰花6g、佛手10g。有氧运动每日30分钟。",
-    chief_round: "住院第8天：加石菖蒲10g开窍。制定作息表。参加社区康复。",
-    discharge: "住院14天。HAMA 16→7分，HAMD 18→8分。舍曲林50mg qd。逍遥丸8丸 tid×4周。"
-  },
-  cervical_neuropathy: {
-    admission: "【入院记录】姓名：黄志强，男，50岁。颈痛伴右上肢放射痛1月。葛根汤合蠲痹汤加减；针灸颈夹脊、大椎；推拿整脊；牵引；超短波。",
-    first_course: "鉴别诊断：1.脊髓型(下肢不稳、Hoffmann+)；2.胸廓出口(Adson+)；3.腕管综合征(正中神经)。",
-    daily_course: "住院第2天：颈痛减轻。葛根汤合蠲痹汤加减。针灸+推拿整脊+牵引3.5kg+超短波。避免低头。",
-    attending_round: "住院第4天：颈痛明显减轻。加乳香6g、没药6g、全蝎3g。牵引4-4.5kg。颈部等长收缩。",
-    chief_round: "住院第8天：去乳没，加杜仲15g、桑寄生15g补肾。颈部保健操。每45分钟起身活动。",
-    discharge: "住院14天。颈痛消失。颈舒颗粒1袋 tid×4周。甲钴胺0.5mg tid。2周后复诊。"
-  },
-  parkinson: {
-    admission: "【入院记录】姓名：王德福，男，72岁。帕金森病3年行走困难1月。大定风珠合六味地黄丸加减；帕金森特色康复；TMS。",
-    first_course: "鉴别诊断：1.特发性震颤(姿势性、无肌强直)；2.MSA(自主神经障碍)；3.血管性帕金森(脑血管病史)。",
-    daily_course: "住院第2天：震颤同前。大定风珠合六味地黄丸加减。针灸+康复40min+TMS 20min。防跌倒评估。",
-    attending_round: "住院第4天：起步略改善。加天麻15g、僵蚕10g。增加平衡+步态训练。调整多巴丝肼。",
-    chief_round: "住院第7天：加鹿角胶10g、龟板胶10g。言语训练+家庭安全评估。",
-    discharge: "住院14天。Berg 42分，UPDRS-III 40→30分。多巴丝肼维持。六味地黄丸8丸 tid×8周。4周后复诊。"
-  },
-  rotator_cuff: {
-    admission: "【入院记录】姓名：赵强，男，52岁。右肩抬臂困难3周。疼痛弧(+)Jobe(+)。MRI示冈上肌腱部分撕裂(<1cm)。身痛逐瘀汤加减；Codman运动+肩胛稳定训练；超声波+激光。",
-    first_course: "鉴别诊断：1.肩周炎(主动被动均受限)；2.肩峰撞击(Neer+)；3.肱二头肌长头腱炎(结节间沟压痛+)。",
-    daily_course: "住院第2天：休息痛减轻。身痛逐瘀汤加减。针灸+Codman运动+被动前屈上举+被动外旋。超声波+激光。",
-    attending_round: "住院第4天：前屈95°外展85°。加姜黄10g、仲筋草15g。全范围等长收缩。",
-    chief_round: "住院第8天：加桑枝15g、白芍20g。弹力带渐进抗阻(第3-4周)。肩胛稳定升级。",
-    discharge: "住院14天。前屈110°外展100°，Constant 45→68分。塞来昔布200mg qd×1周。3周后复诊。MRI 6周复查。"
-  }
-};
-
-// ===== SHOW EXAMPLE =====
-
 function init(){
   // Splash
   setTimeout(function(){$('splash').classList.add('hide');},600);
@@ -954,28 +672,18 @@ function init(){
 
 // ===== START =====
 // Use try-catch to prevent blank page
-// Safety auto-hide splash
-var _st=setTimeout(function(){var sp=$('splash');if(sp)sp.classList.add('hide');},3000);
 try{
   init();
-  clearTimeout(_st);
-  setTimeout(function(){var sp=$('splash');if(sp)sp.classList.add('hide');},600);
 }catch(e){
-  clearTimeout(_st);
   console.error(e);
-  var sp=$('splash');
-  if(sp){
-    var se=$('splashErr');
-    if(se){
-      se.style.display='block';
-      se.textContent='加载出错：'+e.message+'。点击继续';
-      se.style.cursor='pointer';
-      se.addEventListener('click',function(){sp.classList.add('hide');});
-    }else{
-      sp.style.cursor='pointer';
-      sp.addEventListener('click',function(){this.classList.add('hide');});
-    }
-    setTimeout(function(){if(sp)sp.classList.add('hide');},5000);
+  var se=$('splashErr');
+  if(se){
+    se.style.display='block';
+    se.textContent='加载出错：'+e.message+'。点此继续';
+    se.style.cursor='pointer';
+    se.addEventListener('click',function(){
+      $('splash').classList.add('hide');
+    });
   }
 }
 })();

@@ -1,0 +1,59 @@
+{
+  "stroke": [
+    "admission",
+    "first_course",
+    "daily_course_1",
+    "daily_course_2",
+    "daily_course_3",
+    "attending_round",
+    "chief_round",
+    "discharge"
+  ],
+  "vertigo": [
+    "admission",
+    "first_course",
+    "daily_course",
+    "attending_round",
+    "chief_round",
+    "discharge"
+  ],
+  "lumbar": [
+    "admission",
+    "first_course",
+    "daily_course",
+    "attending_round",
+    "chief_round",
+    "discharge"
+  ],
+  "facial": [
+    "admission",
+    "first_course",
+    "daily_course",
+    "attending_round",
+    "chief_round",
+    "discharge"
+  ],
+  "shoulder": [
+    "admission",
+    "first_course",
+    "daily_course",
+    "attending_round",
+    "chief_round",
+    "discharge"
+  ],
+  "knee": [
+    "admission",
+    "first_course",
+    "daily_course",
+    "attending_round",
+    "chief_round",
+    "discharge"
+  ],
+  "flaccidity": [
+    "admission",
+    "first_course"
+  ],
+  "poststroke": [
+    "admission"
+  ]
+}
