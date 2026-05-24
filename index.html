@@ -1510,19 +1510,40 @@ function init(){
 }
 
 // ===== START =====
+// Safety: auto-hide splash after 3000ms (fallback)
+var _splashTimer=setTimeout(function(){
+  var _sp=$('splash');
+  if(_sp) _sp.classList.add('hide');
+},3000);
+
 // Use try-catch to prevent blank page
 try{
   init();
+  // If init succeeds, hide splash
+  clearTimeout(_splashTimer);
+  setTimeout(function(){
+    var _sp2=$('splash');
+    if(_sp2) _sp2.classList.add('hide');
+  },600);
 }catch(e){
   console.error(e);
-  var se=$('splashErr');
-  if(se){
-    se.style.display='block';
-    se.textContent='加载出错：'+e.message+'。点此继续';
-    se.style.cursor='pointer';
-    se.addEventListener('click',function(){
-      $('splash').classList.add('hide');
-    });
+  clearTimeout(_splashTimer);
+  // Show error and let user dismiss
+  var sp=$('splash');
+  if(sp){
+    var se=$('splashErr');
+    if(se){
+      se.style.display='block';
+      se.textContent='加载出错：'+e.message+'。点击继续';
+      se.style.cursor='pointer';
+      se.addEventListener('click',function(){sp.classList.add('hide');});
+    }else{
+      // Fallback: hide on click
+      sp.style.cursor='pointer';
+      sp.addEventListener('click',function(){this.classList.add('hide');});
+    }
+    // Also auto-hide after 5s
+    setTimeout(function(){sp.classList.add('hide');},5000);
   }
 }
 })();
